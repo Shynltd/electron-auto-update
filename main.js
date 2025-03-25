@@ -34,7 +34,6 @@ autoUpdater.on("update-not-available", (info) => {
   curWindow.showMessage(`No update available. Current version ${app.getVersion()}`);
 });
 
-/*Download Completion Message*/
 autoUpdater.on("update-downloaded", (info) => {
   curWindow.showMessage(`Update downloaded. Current version ${app.getVersion()}`);
 });
@@ -43,10 +42,6 @@ autoUpdater.on("error", (info) => {
   curWindow.showMessage(info);
 });
 
-
-
-
-//Global exception handler
 process.on("uncaughtException", function (err) {
   console.log(err);
 });
